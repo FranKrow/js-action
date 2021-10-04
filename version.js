@@ -11,3 +11,7 @@ const run = async () =>  {
 
     console.log(`file ${file}`);
 }
+
+run()
+    .then(() => core.info("Files updated"))
+    .catch(error => core.setFailed(error.message));
