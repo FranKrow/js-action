@@ -16,6 +16,6 @@ El tiempo en que lo saludamos.
 
 ## Example usage
 
-uses: actions/hello-world-javascript-action@v1.1  
+uses: FranKrow/js-action@v1
 with:  
   who-to-greet: 'Mona the Octocat'
