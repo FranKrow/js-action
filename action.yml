@@ -1,13 +1,21 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Update the version of the YAML file'
+description: 'Updates the version on a new release'
 inputs:
   who-to-greet:  # id of input
     description: 'Who to greet'
     required: true
     default: 'World'
+  files:
+    required: false
+    description: Comma separated list of files to update its version field
+    default: api.yml
+  version-regexp:
+    required: false
+    description: Regex to match release tag name
+    default: '\d+.\d+.\d+'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
 runs:
   using: 'node12'
-  main: 'index.js'
+  main: 'version.js'
