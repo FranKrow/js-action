@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Hello world action step
       id: hello
-      uses: FranKrow/js-action@v1
+      uses: FranKrow/js-action@v2
       with:
         who-to-greet: 'Le Champion'
     # Use the output from the `hello` step

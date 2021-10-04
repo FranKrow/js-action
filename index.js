@@ -1,17 +1,17 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 
-const run = async () =>  {
-    core.info("Setting the input and env variables");
+try {
 
-    const root = process.env.GITHUB_WORKSPACE;
-    const file = core.getInput("files").replace(" ","").split(",");
+    const nameToGreet = core.getInput('who-to-greet');
+    const time = (new Date()).toTimeString();
 
-    console.log(`root ${root}`);
+    console.log(`Hello ${nameToGreet}!`);
+    core.setOutput("time", time);
 
-    console.log(`file ${file}`);
+    const payload = JSON.stringify(github.context.payload, undefined, 2);
+    console.log(`The event payload: ${payload}`);
+
+} catch (error) {
+    core.setFailed(error.message);
 }
-
-run()
-    .then(() => core.info("Files updated"))
-    .catch(error => core.setFailed(error.message));
