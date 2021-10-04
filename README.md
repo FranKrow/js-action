@@ -1,4 +1,4 @@
-# Hello world docker action
+# Hello world javascript action
 
 Esta acción imprime "Hello World" o "Hello" + el nombre de una persona a quien saludar en el registro.
 
@@ -16,6 +16,6 @@ El tiempo en que lo saludamos.
 
 ## Example usage
 
-uses: actions/hello-world-javascript-action@v1.1
-with:
+uses: actions/hello-world-javascript-action@v1.1  
+with:  
   who-to-greet: 'Mona the Octocat'
