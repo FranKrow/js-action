@@ -8,7 +8,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Updates the version
       id: update
-      uses: FranKrow/js-action@v2
+      uses: FranKrow/js-action@v2.1
       with:
         files: 'package.json, api.yaml'
         version-regexp: '\d+.\d+.\d+'
