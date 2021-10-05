@@ -13,6 +13,9 @@ inputs:
     required: false
     description: Regex to match release tag name
     default: '\d+.\d+.\d+'
+  repo-token:
+    required: false
+    description: GitHub token to get the latest release in order to push to branch
 outputs:
   time: # id of output
     description: 'The time we greeted you'
